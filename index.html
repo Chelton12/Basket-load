@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelton Store | Elite do Basquete</title>
+    <style>
+        /* --- PALETA NBA + EFEITOS --- */
+        :root {
+            --purple: #552583;    /* Lakers */
+            --gold: #FDB927;      /* Lakers */
+            --orange: #FF7F00;    /* Bola */
+            --wood: #e6c22933;    /* Quadra */
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* --- HEADER ESTILIZADO --- */
+        header {
+            background: linear-gradient(135deg, var(--purple), #000);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        /* --- BANNER HERO (DESTAQUE) --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3');
+            height: 60vh;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        .btn {
+            background: var(--orange);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: var(--gold);
+            transform: scale(1.05);
+        }
+
+        /* --- SEÇÃO DE PRODUTOS --- */
+        .produtos {
+            padding: 50px 20px;
+            background-color: var(--wood);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--purple);
+            font-size: 2em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-title {
+            margin: 0 0 10px;
+            font-size: 1.3em;
+            color: var(--purple);
+        }
+        .card-price {
+            font-weight: bold;
+            color: var(--orange);
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .card-badge {
+            background: var(--purple);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: linear-gradient(135deg, #000, var(--purple));
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            .hero {
+                height: 50vh;
+            }
+            .hero-content h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chelton Store</h1>
+        <p>Sua loja oficial de artigos de basquete</p>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>COLEÇÃO NBA 2025</h2>
+            <p>Os melhores equipamentos para dominar a quadra</p>
+            <button class="btn">VER LANÇAMENTOS</button>
+        </div>
+    </section>
+
+    <section class="produtos">
+        <h2 class="section-title">NOSSOS PRODUTOS</h2>
+        <div class="grid">
+            <!-- PRODUTO 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixlib=rb-4.0.3" alt="Bola de Basquete" class="card-img">
+                <div class="card-body">
+                    <span class="card-badge">MAIS VENDIDO</span>
+                    <h3 class="card-title">Bola NBA Official Game</h3>
+                    <p>Bola oficial da NBA, feita para jogos profissionais.</p>
+                    <p class="card-price">R$ 299,90</p>
+                    <button class="btn">COMPRAR</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3" alt="Tênis de Basquete" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Tênis LeBron XXIII</h3>
+                    <p>Tecnologia Air Max para máximo amortecimento.</p>
+                    <p class="card-price">R$ 899,90</p>
+                    <button class="btn">COMPRAR</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526080676457-4544f0e31e57?ixlib=rb-4.0.3" alt="Camisa de Time" class="card-img">
+                <div class="card-body">
+                    <span class="card-badge">LANÇAMENTO</span>
+                    <h3 class="card-title">Camisa Lakers 24</h3>
+                    <p>Edição especial Kobe Bryant, tecido Dry-Fit.</p>
+                    <p class="card-price">R$ 249,90</p>
+                    <button class="btn">COMPRAR</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 4 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-4.0.3" alt="Meias Esportivas" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Meias NBA Elite</h3>
+                    <p>Conforto premium para longas sessões de treino.</p>
+                    <p class="card-price">R$ 59,90</p>
+                    <button class="btn">COMPRAR</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 5 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3" alt="Boné NBA" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Boné Chicago Bulls</h3>
+                    <p>Clássico retrô, ajustável, múltiplas cores.</p>
+                    <p class="card-price">R$ 129,90</p>
+                    <button class="btn">COMPRAR</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 6 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1576435728678-68d207c6426d?ixlib=rb-4.0.3" alt="Mochila Esportiva" class="card-img">
+                <div class="card-body">
+                    <span class="card-badge">OFERTA</span>
+                    <h3 class="card-title">Mochila Jordan</h3>
+                    <p>Armazenamento espaçoso para todos os equipamentos.</p>
+                    <p class="card-price">R$ 199,90</p>
+                    <button class="btn">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Chelton Store - Todos os direitos reservados</p>
+        <div class="social-links">
+            <a href="#">📱</a>
+            <a href="#">📷</a>
+            <a href="#">💻</a>
+        </div>
+    </footer>
+</body>
+</html>
